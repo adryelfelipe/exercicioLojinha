@@ -1,4 +1,4 @@
 package Arquitetura.Models;
 
-public class Eletronico {
+public class Eletronico implements{
 }
