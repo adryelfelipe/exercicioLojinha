@@ -5,5 +5,5 @@ public interface IProduto {
     // MÉTODOS ABASTRATOS
     String getNome();
 
-    String getPreco();
+    double getPreco();
 }
