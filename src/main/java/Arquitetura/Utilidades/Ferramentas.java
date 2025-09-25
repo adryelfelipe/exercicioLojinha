@@ -15,12 +15,12 @@ public class Ferramentas {
     // Métodos
 
     // ------ APLICA DELAY EM MILISEGUNDOS ------ //
-    public void Delay(int ms) {
+    public static void Delay(int ms) {
         try{Thread.sleep(ms);}catch(InterruptedException e){}
     }
 
     // ------ FAZ INPUT DE DOUBLE E RETORNA ------ //
-    public double lDouble() {
+    public static double lDouble() {
         double num = ler.nextDouble();
 
         ler.nextLine(); // Esvazia o buffer
@@ -29,12 +29,12 @@ public class Ferramentas {
     }
 
     // ------ FAZ INPUT DE STRING E RETORNA ------ //
-    public String lString() {
+    public static String lString() {
         return ler.nextLine();
     }
 
     // ------ FAZ INPUT DE INTEIRO E RETORNA ------ //
-    public int lInteiro() {
+    public static int lInteiro() {
         int num = ler.nextInt();
 
         ler.nextLine(); // Esvazia o buffer
