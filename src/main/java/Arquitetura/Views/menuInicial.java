@@ -45,7 +45,11 @@ public class menuInicial {
                     menuProdutos.listaProdutos(produtoService);
                 }
 
-                case 4 -> continuar = false;
+                case 4 -> {
+                    continuar = false;
+
+                    menuSair.sair();
+                }
             }
         }
     }
