@@ -22,8 +22,14 @@ public class ProdutoDao {
         produtos.add(produto);
     }
 
+    // ---------- REMOVE PRODUTOS DA LISTA DE PRODUTOS ---------- //
+    public void removerProduto(IProduto produto) {
+        produtos.remove(produto);
+    }
+
     // ---------- LISTA OS PRODUTOS DA ARRAYLIST DE PRODUTOS ---------- //
     public ArrayList<IProduto> listarProdutos() {
         return produtos;
     }
+
 }
