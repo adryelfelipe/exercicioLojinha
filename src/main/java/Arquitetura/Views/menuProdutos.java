@@ -1,7 +1,9 @@
 package Arquitetura.Views;
 
 import Arquitetura.Daos.ProdutoDao;
+import Arquitetura.Models.Eletronico;
 import Arquitetura.Models.IProduto;
+import Arquitetura.Models.Vestuario;
 import Arquitetura.Services.ProdutoService;
 import Arquitetura.Utilidades.Ferramentas;
 
@@ -16,12 +18,17 @@ public class menuProdutos {
         System.out.println();
 
         for(IProduto produto : produtoService.listarProdutos()) {
-            System.out.println("NOME: " + produto.getNome() + " // PREÇO: R$" + produto.getPreco());
+                System.out.print("NOME: " + produto.getNome() + " // PREÇO: R$" + produto.getPreco());
+                if(produto instanceof Eletronico) {
+                    System.out.println(" // GARANTIA: " + ((Eletronico) produto).getGarantiaMeses());
+                } else {
+                    System.out.println(" // TAMANHO: " + ((Vestuario) produto).getTamanhoRoupa());
+                }
         }
 
         System.out.println("PREÇO TOTAL: R$" + produtoService.calcularTotal());
 
-        Ferramentas.Delay(1000);
+        Ferramentas.Delay(2500);
 
         Ferramentas.limpaTerminal();
     }
