@@ -41,4 +41,11 @@ public class Ferramentas {
 
         return num;
     }
+
+    // ------ PULA MUITAS LINHAS DO TERMINAL ------ //
+    public static void limpaTerminal() {
+        for(int i = 0; i < 50; i ++) {
+            System.out.println();
+        }
+    }
 }

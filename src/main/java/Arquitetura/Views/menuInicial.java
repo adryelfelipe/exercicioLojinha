@@ -20,7 +20,7 @@ public class menuInicial {
         int op = Ferramentas.lInteiro();
 
         switch(op) {
-            case 1 -> {}// chama menuEletornico
+            case 1 -> {}// chama menuEletronico
             case 2 -> {}// chama menuVestuario;
         }
     }
