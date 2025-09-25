@@ -3,6 +3,8 @@ package Arquitetura.Services;
 import Arquitetura.Daos.ProdutoDao;
 import Arquitetura.Models.IProduto;
 
+import java.util.ArrayList;
+
 public class ProdutoService {
 
     // Atributos
@@ -20,6 +22,10 @@ public class ProdutoService {
 
     public void removerProduto(IProduto produto) {
         produtoDao.removerProduto(produto);
+    }
+
+    public ArrayList<IProduto> listarProdutos() {
+        return produtoDao.listarProdutos();
     }
 
     // CALCULA O PREÇO TOTAL DA LISTA DE COMPRAS
