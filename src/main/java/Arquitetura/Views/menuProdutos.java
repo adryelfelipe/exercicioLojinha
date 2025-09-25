@@ -3,6 +3,7 @@ package Arquitetura.Views;
 import Arquitetura.Daos.ProdutoDao;
 import Arquitetura.Models.IProduto;
 import Arquitetura.Services.ProdutoService;
+import Arquitetura.Utilidades.Ferramentas;
 
 public class menuProdutos {
 
@@ -19,5 +20,9 @@ public class menuProdutos {
         }
 
         System.out.println("PREÇO TOTAL: R$" + produtoService.calcularTotal());
+
+        Ferramentas.Delay(1000);
+
+        Ferramentas.limpaTerminal();
     }
 }

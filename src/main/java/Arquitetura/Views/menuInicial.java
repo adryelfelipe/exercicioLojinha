@@ -13,31 +13,39 @@ public class menuInicial {
 
     // ------ MENU INICIAL ------ //
     public static void menu() {
-        System.out.println("============");
-        System.out.println("MENU INICIAL");
-        System.out.println("============");
+        boolean continuar = true;
 
-        System.out.println();
+        while (continuar) {
 
-        System.out.println("[1] - Adicionar Eletronico");
-        System.out.println("[2] - Adicionar Vestuario");
-        System.out.println("[3] - Visualizar Produtos");
-        System.out.print("Escolha sua opção: ");
-        int op = Ferramentas.lInteiro();
+            System.out.println("============");
+            System.out.println("MENU INICIAL");
+            System.out.println("============");
 
-        Ferramentas.limpaTerminal();
+            System.out.println();
 
-        switch(op) {
-            case 1 -> {
-                produtoService.adicionarProduto(menuEletronico.criarEletronico());
-            }
+            System.out.println("[1] - Adicionar Eletronico");
+            System.out.println("[2] - Adicionar Vestuario");
+            System.out.println("[3] - Visualizar Produtos");
+            System.out.println("[4] - Sair");
+            System.out.print("Escolha sua opção: ");
+            int op = Ferramentas.lInteiro();
 
-            case 2 -> {
-                produtoService.adicionarProduto(menuVestuario.criarVestuario());
-            }
+            Ferramentas.limpaTerminal();
 
-            case 3 -> {
-                menuProdutos.listaProdutos(produtoService);
+            switch (op) {
+                case 1 -> {
+                    produtoService.adicionarProduto(menuEletronico.criarEletronico());
+                }
+
+                case 2 -> {
+                    produtoService.adicionarProduto(menuVestuario.criarVestuario());
+                }
+
+                case 3 -> {
+                    menuProdutos.listaProdutos(produtoService);
+                }
+
+                case 4 -> continuar = false;
             }
         }
     }
