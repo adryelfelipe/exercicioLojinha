@@ -16,8 +16,17 @@ public class ProdutoService {
     }
 
     // Métodos
-    public void adicionarProduto(IProduto produto) {
-        produtoDao.adicionarProduto(produto);
+    public boolean adicionarProduto(IProduto produto) {
+        if(!produtoDao.listarProdutos().contains(produto))
+        {
+            produtoDao.adicionarProduto(produto);
+
+            return true;
+
+        } else {
+
+            return false;
+        }
     }
 
     public void removerProduto(IProduto produto) {

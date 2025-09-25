@@ -34,11 +34,29 @@ public class menuInicial {
 
             switch (op) {
                 case 1 -> {
-                    produtoService.adicionarProduto(menuEletronico.criarEletronico());
+                    if(produtoService.adicionarProduto(menuEletronico.criarEletronico())) {
+                        System.out.println("Produto adicionado com sucesso!");
+
+                    } else {
+                        System.out.println("ERRO! ESTE PRODUTO JÁ EXISTE!");
+                    }
+
+                    Ferramentas.Delay(500);
+
+                    Ferramentas.limpaTerminal();
                 }
 
                 case 2 -> {
-                    produtoService.adicionarProduto(menuVestuario.criarVestuario());
+                    if(produtoService.adicionarProduto(menuVestuario.criarVestuario())) {
+                        System.out.println("Produto adicionado com sucesso!");
+
+                    } else {
+                        System.out.println("ERRO! ESTE PRODUTO JÁ EXISTE!");
+                    }
+
+                    Ferramentas.Delay(500);
+
+                    Ferramentas.limpaTerminal();
                 }
 
                 case 3 -> {
