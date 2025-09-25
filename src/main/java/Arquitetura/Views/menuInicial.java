@@ -1,8 +1,12 @@
 package Arquitetura.Views;
 
+import Arquitetura.Daos.ProdutoDao;
 import Arquitetura.Utilidades.Ferramentas;
 
 public class menuInicial {
+
+    // Atributos
+    private static ProdutoDao produtoDao = new ProdutoDao();
 
     // Métodos
 
@@ -16,12 +20,19 @@ public class menuInicial {
 
         System.out.println("[1] - Adicionar Eletronico");
         System.out.println("[2] - Adicionar Vestuario");
-        System.out.println("Escolha sua opção: ");
+        System.out.print("Escolha sua opção: ");
         int op = Ferramentas.lInteiro();
 
+        Ferramentas.limpaTerminal();
+
         switch(op) {
-            case 1 -> {}// chama menuEletronico
-            case 2 -> {}// chama menuVestuario;
+            case 1 -> {
+                produtoDao.adicionarProduto(menuEletronico.criarEletronico());
+            }
+
+            case 2 -> {
+                produtoDao.adicionarProduto(menuVestuario.criarVestuario());
+            }
         }
     }
 }

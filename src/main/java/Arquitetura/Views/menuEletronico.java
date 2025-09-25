@@ -25,10 +25,10 @@ public class menuEletronico {
         System.out.print("Digite o nome do eletrônico: ");
         nome = Ferramentas.lString();
 
-        System.out.println("Digite o preço do eletrônico");
+        System.out.print("Digite o preço do eletrônico: ");
         preco = Ferramentas.lDouble();
 
-        System.out.println("Digite o tempo de garantia em meses: ");
+        System.out.print("Digite o tempo de garantia em meses: ");
         garantiaMeses = Ferramentas.lInteiro();
 
         Ferramentas.limpaTerminal();
